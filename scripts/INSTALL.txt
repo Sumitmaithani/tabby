@@ -1,0 +1,31 @@
+Welcome to Tabby
+================
+
+Install
+-------
+1. Drag Tabby.app into the Applications folder (use the Applications shortcut in this window).
+
+2. Eject this disk image, then open Tabby from your Applications folder.
+
+First launch (unsigned app)
+---------------------------
+Tabby is not signed with an Apple Developer ID, so macOS may block it the first time.
+
+Option A — recommended:
+  • Right-click Tabby.app in Applications
+  • Choose "Open"
+  • Click "Open" in the dialog
+  • After that, you can launch Tabby normally (double-click or from the menu bar)
+
+Option B — if macOS still refuses to open the app:
+  Open Terminal and run:
+
+    xattr -dr com.apple.quarantine /Applications/Tabby.app
+
+  Then double-click Tabby.app.
+
+Usage
+-----
+Tabby lives in your menu bar (cat icon). Click it to save and open bookmarks.
+
+Requirements: macOS 13 Ventura or later.

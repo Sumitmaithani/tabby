@@ -1,0 +1,57 @@
+[
+  {
+    "id": "11111111-1111-1111-1111-111111111111",
+    "title": "Swift Documentation",
+    "url": "https://swift.org/documentation/",
+    "tags": ["Work", "Reference"],
+    "notes": "Official Swift language reference and guides.",
+    "dateAdded": "2024-01-15T10:00:00Z",
+    "clickCount": 12,
+    "faviconData": null,
+    "isArchived": false
+  },
+  {
+    "id": "22222222-2222-2222-2222-222222222222",
+    "title": "SwiftUI Tutorials — Apple Developer",
+    "url": "https://developer.apple.com/tutorials/swiftui",
+    "tags": ["Work"],
+    "notes": "Step-by-step SwiftUI tutorials from Apple.",
+    "dateAdded": "2024-01-16T14:30:00Z",
+    "clickCount": 7,
+    "faviconData": null,
+    "isArchived": false
+  },
+  {
+    "id": "33333333-3333-3333-3333-333333333333",
+    "title": "Hacker News",
+    "url": "https://news.ycombinator.com",
+    "tags": ["Reading"],
+    "notes": "Daily tech news aggregator.",
+    "dateAdded": "2024-01-17T09:00:00Z",
+    "clickCount": 45,
+    "faviconData": null,
+    "isArchived": false
+  },
+  {
+    "id": "44444444-4444-4444-4444-444444444444",
+    "title": "Raycast",
+    "url": "https://www.raycast.com",
+    "tags": ["Tools"],
+    "notes": "Productivity launcher — inspiration for this app's design.",
+    "dateAdded": "2024-01-18T11:00:00Z",
+    "clickCount": 3,
+    "faviconData": null,
+    "isArchived": false
+  },
+  {
+    "id": "55555555-5555-5555-5555-555555555555",
+    "title": "Linear",
+    "url": "https://linear.app",
+    "tags": ["Tools", "Work"],
+    "notes": "Issue tracker with great design.",
+    "dateAdded": "2024-01-19T16:00:00Z",
+    "clickCount": 18,
+    "faviconData": null,
+    "isArchived": false
+  }
+]

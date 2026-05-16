@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA000000000000000000E001 /* TabbyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D001 /* TabbyApp.swift */; };
+		AA000000000000000000E002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D002 /* AppDelegate.swift */; };
+		AA000000000000000000E003 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D003 /* Bookmark.swift */; };
+		AA000000000000000000E004 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D004 /* Tag.swift */; };
+		AA000000000000000000E005 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D005 /* AppSettings.swift */; };
+		AA000000000000000000E006 /* BookmarkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D006 /* BookmarkStore.swift */; };
+		AA000000000000000000E007 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D007 /* SettingsStore.swift */; };
+		AA000000000000000000E008 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D008 /* MenuBarView.swift */; };
+		AA000000000000000000E009 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D009 /* BookmarkListView.swift */; };
+		AA000000000000000000E010 /* AddBookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D010 /* AddBookmarkView.swift */; };
+		AA000000000000000000E011 /* BookmarkRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D011 /* BookmarkRowView.swift */; };
+		AA000000000000000000E012 /* TagChipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D012 /* TagChipsView.swift */; };
+		AA000000000000000000E013 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D013 /* SettingsView.swift */; };
+		AA000000000000000000E014 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D014 /* EmptyStateView.swift */; };
+		AA000000000000000000E015 /* ExportImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D015 /* ExportImportView.swift */; };
+		AA000000000000000000E016 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D016 /* DataService.swift */; };
+		AA000000000000000000E017 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D017 /* ExportService.swift */; };
+		AA000000000000000000E018 /* ImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D018 /* ImportService.swift */; };
+		AA000000000000000000E019 /* FaviconService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D019 /* FaviconService.swift */; };
+		AA000000000000000000E020 /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D020 /* BackupService.swift */; };
+		AA000000000000000000E021 /* HotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D021 /* HotKeyManager.swift */; };
+		AA000000000000000000E022 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D022 /* Extensions.swift */; };
+		AA000000000000000000E023 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D023 /* Constants.swift */; };
+		AA000000000000000000E024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D024 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA000000000000000000C001 /* Tabby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA000000000000000000D001 /* TabbyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbyApp.swift; sourceTree = "<group>"; };
+		AA000000000000000000D002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA000000000000000000D003 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		AA000000000000000000D004 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		AA000000000000000000D005 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		AA000000000000000000D006 /* BookmarkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkStore.swift; sourceTree = "<group>"; };
+		AA000000000000000000D007 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		AA000000000000000000D008 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D009 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D010 /* AddBookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookmarkView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D011 /* BookmarkRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkRowView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D012 /* TagChipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagChipsView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D013 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D014 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D015 /* ExportImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportImportView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D016 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		AA000000000000000000D017 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		AA000000000000000000D018 /* ImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportService.swift; sourceTree = "<group>"; };
+		AA000000000000000000D019 /* FaviconService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaviconService.swift; sourceTree = "<group>"; };
+		AA000000000000000000D020 /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
+		AA000000000000000000D021 /* HotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyManager.swift; sourceTree = "<group>"; };
+		AA000000000000000000D022 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AA000000000000000000D023 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AA000000000000000000D024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA000000000000000000D025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA000000000000000000D026 /* Tabby.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tabby.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA00000000000000000000B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA000000000000000000001A = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000F001 /* Tabby */,
+				AA000000000000000000001B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA000000000000000000001B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000C001 /* Tabby.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA000000000000000000F001 /* Tabby */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000D001 /* TabbyApp.swift */,
+				AA000000000000000000D002 /* AppDelegate.swift */,
+				AA000000000000000000F002 /* Models */,
+				AA000000000000000000F003 /* ViewModels */,
+				AA000000000000000000F004 /* Views */,
+				AA000000000000000000F005 /* Services */,
+				AA000000000000000000F006 /* Utils */,
+				AA000000000000000000F007 /* Resources */,
+			);
+			path = Tabby;
+			sourceTree = "<group>";
+		};
+		AA000000000000000000F002 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000D003 /* Bookmark.swift */,
+				AA000000000000000000D004 /* Tag.swift */,
+				AA000000000000000000D005 /* AppSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA000000000000000000F003 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000D006 /* BookmarkStore.swift */,
+				AA000000000000000000D007 /* SettingsStore.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA000000000000000000F004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000D008 /* MenuBarView.swift */,
+				AA000000000000000000D009 /* BookmarkListView.swift */,
+				AA000000000000000000D010 /* AddBookmarkView.swift */,
+				AA000000000000000000D011 /* BookmarkRowView.swift */,
+				AA000000000000000000D012 /* TagChipsView.swift */,
+				AA000000000000000000D013 /* SettingsView.swift */,
+				AA000000000000000000D014 /* EmptyStateView.swift */,
+				AA000000000000000000D015 /* ExportImportView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA000000000000000000F005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000D016 /* DataService.swift */,
+				AA000000000000000000D017 /* ExportService.swift */,
+				AA000000000000000000D018 /* ImportService.swift */,
+				AA000000000000000000D019 /* FaviconService.swift */,
+				AA000000000000000000D020 /* BackupService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AA000000000000000000F006 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000D021 /* HotKeyManager.swift */,
+				AA000000000000000000D022 /* Extensions.swift */,
+				AA000000000000000000D023 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AA000000000000000000F007 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000D024 /* Assets.xcassets */,
+				AA000000000000000000D025 /* Info.plist */,
+				AA000000000000000000D026 /* Tabby.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA000000000000000000001D /* Tabby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA000000000000000000001F /* Build configuration list for PBXNativeTarget "Tabby" */;
+			buildPhases = (
+				AA00000000000000000000B1 /* Sources */,
+				AA00000000000000000000B3 /* Frameworks */,
+				AA00000000000000000000B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tabby;
+			productName = Tabby;
+			productReference = AA000000000000000000C001 /* Tabby.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA000000000000000000001C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AA000000000000000000001D = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AA000000000000000000001E /* Build configuration list for PBXProject "Tabby" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA000000000000000000001A;
+			productRefGroup = AA000000000000000000001B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA000000000000000000001D /* Tabby */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA00000000000000000000B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000000000000000000E024 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA00000000000000000000B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000000000000000000E001 /* TabbyApp.swift in Sources */,
+				AA000000000000000000E002 /* AppDelegate.swift in Sources */,
+				AA000000000000000000E003 /* Bookmark.swift in Sources */,
+				AA000000000000000000E004 /* Tag.swift in Sources */,
+				AA000000000000000000E005 /* AppSettings.swift in Sources */,
+				AA000000000000000000E006 /* BookmarkStore.swift in Sources */,
+				AA000000000000000000E007 /* SettingsStore.swift in Sources */,
+				AA000000000000000000E008 /* MenuBarView.swift in Sources */,
+				AA000000000000000000E009 /* BookmarkListView.swift in Sources */,
+				AA000000000000000000E010 /* AddBookmarkView.swift in Sources */,
+				AA000000000000000000E011 /* BookmarkRowView.swift in Sources */,
+				AA000000000000000000E012 /* TagChipsView.swift in Sources */,
+				AA000000000000000000E013 /* SettingsView.swift in Sources */,
+				AA000000000000000000E014 /* EmptyStateView.swift in Sources */,
+				AA000000000000000000E015 /* ExportImportView.swift in Sources */,
+				AA000000000000000000E016 /* DataService.swift in Sources */,
+				AA000000000000000000E017 /* ExportService.swift in Sources */,
+				AA000000000000000000E018 /* ImportService.swift in Sources */,
+				AA000000000000000000E019 /* FaviconService.swift in Sources */,
+				AA000000000000000000E020 /* BackupService.swift in Sources */,
+				AA000000000000000000E021 /* HotKeyManager.swift in Sources */,
+				AA000000000000000000E022 /* Extensions.swift in Sources */,
+				AA000000000000000000E023 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA00000000000000000000A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA00000000000000000000A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AA00000000000000000000A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tabby/Resources/Tabby.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Tabby/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tabby.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA00000000000000000000A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tabby/Resources/Tabby.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Tabby/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tabby.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA000000000000000000001E /* Build configuration list for PBXProject "Tabby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000000000000000000A1 /* Debug */,
+				AA00000000000000000000A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA000000000000000000001F /* Build configuration list for PBXNativeTarget "Tabby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000000000000000000A3 /* Debug */,
+				AA00000000000000000000A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA000000000000000000001C /* Project object */;
+}

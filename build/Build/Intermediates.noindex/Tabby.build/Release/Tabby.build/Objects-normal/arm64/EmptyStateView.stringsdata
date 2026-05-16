@@ -1,0 +1,40 @@
+{
+  "source": "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Views/EmptyStateView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "No results",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 13
+        }
+      },
+      {
+        "comment": "",
+        "key": "No bookmarks yet",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 13
+        }
+      },
+      {
+        "comment": "",
+        "key": "Try a different search or tag filter.",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 18
+        }
+      },
+      {
+        "comment": "",
+        "key": "Paste a URL in the link field above and press Return.",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 19
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,28 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <title>Tabby app icon</title>
+  <desc>Tabby app icon — curled cat on warm cream rounded square, sized for macOS Applications folder</desc>
+  <rect width="1024" height="1024" rx="230" fill="#F4EBE0"/>
+  <g transform="translate(232, 264)">
+    <path d="M 60 260
+             Q 36 170 90 120
+             L 76 56 L 124 104
+             Q 176 80 224 104
+             L 272 56 L 258 120
+             Q 324 170 336 260
+             Q 336 324 276 336
+             Q 176 348 100 336
+             Q 36 324 60 260 Z"
+          fill="#D97757" stroke="#2a1810" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M 304 296
+             Q 376 280 360 220
+             Q 344 256 304 260 Z"
+          fill="#D97757" stroke="#2a1810" stroke-width="10" stroke-linejoin="round"/>
+    <circle cx="156" cy="216" r="10" fill="#2a1810"/>
+    <circle cx="236" cy="216" r="10" fill="#2a1810"/>
+    <path d="M 184 248 Q 198 264 212 248" fill="none" stroke="#2a1810" stroke-width="7" stroke-linecap="round"/>
+    <line x1="110" y1="230" x2="144" y2="236" stroke="#2a1810" stroke-width="4" stroke-linecap="round"/>
+    <line x1="110" y1="244" x2="144" y2="244" stroke="#2a1810" stroke-width="4" stroke-linecap="round"/>
+    <line x1="248" y1="236" x2="282" y2="230" stroke="#2a1810" stroke-width="4" stroke-linecap="round"/>
+    <line x1="248" y1="244" x2="282" y2="244" stroke="#2a1810" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

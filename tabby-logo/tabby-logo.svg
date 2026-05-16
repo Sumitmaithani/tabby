@@ -1,0 +1,28 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>Tabby</title>
+  <desc>Tabby app logo — a curled sleeping cat in warm orange</desc>
+  <circle cx="256" cy="256" r="240" fill="#F4EBE0"/>
+  <g transform="translate(112, 132)">
+    <path d="M 30 130
+             Q 18 85 45 60
+             L 38 28 L 62 52
+             Q 88 40 112 52
+             L 136 28 L 129 60
+             Q 162 85 168 130
+             Q 168 162 138 168
+             Q 88 174 50 168
+             Q 18 162 30 130 Z"
+          fill="#D97757" stroke="#2a1810" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M 152 148
+             Q 188 140 180 110
+             Q 172 128 152 130 Z"
+          fill="#D97757" stroke="#2a1810" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="78" cy="108" r="5" fill="#2a1810"/>
+    <circle cx="118" cy="108" r="5" fill="#2a1810"/>
+    <path d="M 92 124 Q 99 132 106 124" fill="none" stroke="#2a1810" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="55" y1="115" x2="72" y2="118" stroke="#2a1810" stroke-width="2" stroke-linecap="round"/>
+    <line x1="55" y1="122" x2="72" y2="122" stroke="#2a1810" stroke-width="2" stroke-linecap="round"/>
+    <line x1="124" y1="118" x2="141" y2="115" stroke="#2a1810" stroke-width="2" stroke-linecap="round"/>
+    <line x1="124" y1="122" x2="141" y2="122" stroke="#2a1810" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
