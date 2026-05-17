@@ -5,6 +5,49 @@
 	<key>logFormatVersion</key>
 	<integer>12</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>E00447B8-197B-45BF-8B01-8545B67D877D</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E00447B8-197B-45BF-8B01-8545B67D877D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>1</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Tabby project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Tabby</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project Tabby with scheme Tabby and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>800672821.33323002</real>
+			<key>timeStoppedRecording</key>
+			<real>800672830.37897003</real>
+			<key>title</key>
+			<string>Building project Tabby with scheme Tabby and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>E00447B8-197B-45BF-8B01-8545B67D877D</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -1,0 +1,64 @@
+{
+  "source": "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Views/BookmarkRowView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 59
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "Open",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 88
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy URL",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 91
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 96
+        }
+      }
+    ]
+  },
+  "version": 1
+}

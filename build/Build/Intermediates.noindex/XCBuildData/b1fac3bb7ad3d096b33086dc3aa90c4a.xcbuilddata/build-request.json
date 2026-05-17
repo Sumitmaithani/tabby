@@ -1,0 +1,67 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "759d510165f97e101bc04180c6b5558c8df1343e516f87ee33c2c0b37eb47f7a"
+    }
+  ],
+  "containerPath" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "hostTargetedPlatform" : null,
+      "platform" : "macosx",
+      "sdk" : "macosx26.5",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/Build/Products",
+      "derivedDataPath" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build",
+      "indexDataStoreFolderPath" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "COLOR_DIAGNOSTICS" : "YES",
+          "diagnostic_message_length" : "49",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

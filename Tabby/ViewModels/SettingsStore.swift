@@ -35,18 +35,4 @@ final class SettingsStore: ObservableObject {
             }
         }
     }
-
-    // MARK: - Theme
-
-    var effectiveAppearance: NSAppearance? {
-        switch settings.themeOverride {
-        case .system: return nil
-        case .light:  return NSAppearance(named: .aqua)
-        case .dark:   return NSAppearance(named: .darkAqua)
-        }
-    }
-
-    func applyTheme() {
-        NSApp.appearance = effectiveAppearance
-    }
 }

@@ -10,13 +10,6 @@ enum Constants {
             return base.appendingPathComponent(Constants.appName, isDirectory: true)
         }
 
-        static var iCloudURL: URL? {
-            guard let base = FileManager.default.url(
-                forUbiquityContainerIdentifier: nil
-            ) else { return nil }
-            return base.appendingPathComponent("Documents/\(Constants.appName)", isDirectory: true)
-        }
-
         static var bookmarksFile: URL {
             appSupportURL.appendingPathComponent("bookmarks.json")
         }

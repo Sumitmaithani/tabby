@@ -1,0 +1,12 @@
+{
+  "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/TabbyApp.swift" : {
+    "abi-baseline-json" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Release/Tabby.build/Objects-normal/arm64/Tabby.abi.json",
+    "const-values" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Release/Tabby.build/Objects-normal/arm64/Tabby-primary.swiftconstvalues",
+    "dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Release/Tabby.build/Objects-normal/arm64/Tabby-primary.d",
+    "diagnostics" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Release/Tabby.build/Objects-normal/arm64/Tabby-primary.dia",
+    "objc-header" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Release/Tabby.build/Objects-normal/arm64/Tabby-Swift.h",
+    "swiftdoc" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Release/Tabby.build/Objects-normal/arm64/Tabby.swiftdoc",
+    "swiftmodule" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Release/Tabby.build/Objects-normal/arm64/Tabby.swiftmodule",
+    "swiftsourceinfo" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Release/Tabby.build/Objects-normal/arm64/Tabby.swiftsourceinfo"
+  }
+}

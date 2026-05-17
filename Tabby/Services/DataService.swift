@@ -1,9 +1,9 @@
 import Foundation
+import Carbon
 
 final class DataService {
     static let shared = DataService()
 
-    private var useICloud = false
     private let encoder: JSONEncoder
     private let decoder: JSONDecoder
 
@@ -18,16 +18,8 @@ final class DataService {
 
     // MARK: - Directory setup
 
-    func configure(useICloud: Bool) {
-        self.useICloud = useICloud
-        createDirectoriesIfNeeded()
-    }
-
     func ensureStorageReady() {
         createDirectoriesIfNeeded()
-        if useICloud, let icloud = Constants.Paths.iCloudURL {
-            try? FileManager.default.createDirectory(at: icloud, withIntermediateDirectories: true)
-        }
     }
 
     private func createDirectoriesIfNeeded() {
@@ -41,21 +33,10 @@ final class DataService {
         }
     }
 
-    // MARK: - Active storage URL
+    // MARK: - Storage URLs
 
-    var bookmarksURL: URL {
-        if useICloud, let icloud = Constants.Paths.iCloudURL {
-            return icloud.appendingPathComponent("bookmarks.json")
-        }
-        return Constants.Paths.bookmarksFile
-    }
-
-    var tagsURL: URL {
-        if useICloud, let icloud = Constants.Paths.iCloudURL {
-            return icloud.appendingPathComponent("tags.json")
-        }
-        return Constants.Paths.tagsFile
-    }
+    var bookmarksURL: URL { Constants.Paths.bookmarksFile }
+    var tagsURL: URL { Constants.Paths.tagsFile }
 
     // MARK: - Load
 
@@ -77,46 +58,20 @@ final class DataService {
         try save(tags, to: tagsURL)
     }
 
-    // MARK: - Settings (always local)
+    // MARK: - Settings
 
     func loadSettings() -> AppSettings {
-        load(from: Constants.Paths.settingsFile) ?? AppSettings()
+        var settings: AppSettings = load(from: Constants.Paths.settingsFile) ?? AppSettings()
+        // Earlier builds used 0xB00 (⌘⇧⌥) by mistake; migrate to ⌘⇧.
+        if settings.hotKeyModifiers == 0xB00 {
+            settings.hotKeyModifiers = UInt32(cmdKey | shiftKey)
+            try? saveSettings(settings)
+        }
+        return settings
     }
 
     func saveSettings(_ settings: AppSettings) throws {
         try save(settings, to: Constants.Paths.settingsFile)
-    }
-
-    // MARK: - iCloud migration
-
-    func migrateToICloud() throws {
-        guard let icloud = Constants.Paths.iCloudURL else {
-            throw DataError.iCloudUnavailable
-        }
-        let fm = FileManager.default
-        try fm.createDirectory(at: icloud, withIntermediateDirectories: true)
-
-        let pairs: [(URL, URL)] = [
-            (Constants.Paths.bookmarksFile, icloud.appendingPathComponent("bookmarks.json")),
-            (Constants.Paths.tagsFile, icloud.appendingPathComponent("tags.json"))
-        ]
-        for (local, remote) in pairs where fm.fileExists(atPath: local.path) {
-            try? fm.removeItem(at: remote)
-            try fm.copyItem(at: local, to: remote)
-        }
-    }
-
-    func migrateFromICloud() throws {
-        guard let icloud = Constants.Paths.iCloudURL else { return }
-        let fm = FileManager.default
-        let pairs: [(URL, URL)] = [
-            (icloud.appendingPathComponent("bookmarks.json"), Constants.Paths.bookmarksFile),
-            (icloud.appendingPathComponent("tags.json"), Constants.Paths.tagsFile)
-        ]
-        for (remote, local) in pairs where fm.fileExists(atPath: remote.path) {
-            try? fm.removeItem(at: local)
-            try fm.copyItem(at: remote, to: local)
-        }
     }
 
     // MARK: - Helpers
@@ -135,16 +90,5 @@ final class DataService {
         }
         let data = try encoder.encode(value)
         try data.write(to: url, options: .atomicWrite)
-    }
-}
-
-enum DataError: LocalizedError {
-    case iCloudUnavailable
-
-    var errorDescription: String? {
-        switch self {
-        case .iCloudUnavailable:
-            return "iCloud Drive is not available. Make sure you're signed in to iCloud and iCloud Drive is enabled."
-        }
     }
 }

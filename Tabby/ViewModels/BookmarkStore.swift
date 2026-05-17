@@ -27,7 +27,6 @@ final class BookmarkStore: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     init() {
-        dataService.configure(useICloud: false)
         load()
         setupAutoSave()
     }
@@ -195,18 +194,6 @@ final class BookmarkStore: ObservableObject {
     func restore(bookmarks: [Bookmark], tags: [Tag]) {
         self.bookmarks = bookmarks
         self.tags = tags
-    }
-
-    // MARK: - iCloud toggle
-
-    func setICloud(_ enabled: Bool) throws {
-        dataService.configure(useICloud: enabled)
-        if enabled {
-            try dataService.migrateToICloud()
-        } else {
-            try dataService.migrateFromICloud()
-        }
-        save()
     }
 
     // MARK: - Helpers

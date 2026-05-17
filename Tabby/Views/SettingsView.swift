@@ -8,13 +8,11 @@ struct SettingsView: View {
     var onDismiss: (() -> Void)? = nil
 
     @State private var selectedTab: SettingsTab = .general
-    @State private var iCloudError: String? = nil
     @State private var restoreError: String? = nil
     @State private var restoreSuccess = false
 
     enum SettingsTab: String, CaseIterable {
         case general  = "General"
-        case sync     = "Sync"
         case backup   = "Backup"
         case exportImport = "Export/Import"
     }
@@ -51,7 +49,6 @@ struct SettingsView: View {
                     Group {
                         switch selectedTab {
                         case .general:      generalTab
-                        case .sync:         syncTab
                         case .backup:       backupTab
                         case .exportImport: ExportImportView()
                         }
@@ -80,19 +77,6 @@ struct SettingsView: View {
                 .help("Fetches the page title and favicon when you paste a URL.")
 
             Divider()
-            sectionHeader("Appearance")
-
-            Picker("Theme", selection: $settingsStore.settings.themeOverride) {
-                ForEach(AppSettings.ThemeOverride.allCases, id: \.self) { theme in
-                    Text(theme.rawValue).tag(theme)
-                }
-            }
-            .pickerStyle(.segmented)
-            .onChange(of: settingsStore.settings.themeOverride) { _ in
-                settingsStore.applyTheme()
-            }
-
-            Divider()
             sectionHeader("Keyboard Shortcut")
 
             Text("Global shortcut: ⌘⇧L (Cmd+Shift+L)")
@@ -101,48 +85,6 @@ struct SettingsView: View {
             Text("To change the shortcut, edit HotKeyManager.swift and rebuild.")
                 .font(.system(size: 10))
                 .foregroundStyle(.tertiary)
-        }
-    }
-
-    // MARK: - Sync
-
-    private var syncTab: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            sectionHeader("iCloud Drive Sync")
-
-            Toggle("Store data in iCloud Drive", isOn: Binding(
-                get: { settingsStore.settings.useICloudSync },
-                set: { newValue in
-                    iCloudError = nil
-                    do {
-                        try store.setICloud(newValue)
-                        settingsStore.settings.useICloudSync = newValue
-                    } catch {
-                        iCloudError = error.localizedDescription
-                    }
-                }
-            ))
-
-            Text("When enabled, your bookmarks are stored in iCloud Drive and synced across all your Apple devices running Tabby.")
-                .font(.system(size: 11))
-                .foregroundStyle(.secondary)
-
-            if settingsStore.settings.useICloudSync {
-                Label("Syncing via iCloud Drive", systemImage: "icloud.fill")
-                    .font(.system(size: 11, weight: .medium))
-                    .foregroundStyle(.blue)
-            }
-
-            if let err = iCloudError {
-                Label(err, systemImage: "exclamationmark.triangle.fill")
-                    .font(.system(size: 11))
-                    .foregroundStyle(.red)
-            }
-
-            Text("Data location: \(settingsStore.settings.useICloudSync ? "~/Library/Mobile Documents/…" : "~/Library/Application Support/Tabby/")")
-                .font(.system(size: 10))
-                .foregroundStyle(.tertiary)
-                .lineLimit(2)
         }
     }
 
@@ -232,7 +174,6 @@ struct SettingsView: View {
     private func tabIcon(_ tab: SettingsTab) -> String {
         switch tab {
         case .general:      return "gearshape"
-        case .sync:         return "arrow.triangle.2.circlepath"
         case .backup:       return "clock.arrow.circlepath"
         case .exportImport: return "square.and.arrow.up.on.square"
         }

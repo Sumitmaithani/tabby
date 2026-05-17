@@ -16,7 +16,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         setupStatusItem()
         setupPopover()
         setupHotKey()
-        settingsStore.applyTheme()
     }
 
     // MARK: - Status item
@@ -89,6 +88,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 if self.popover?.isShown == true {
                     self.closePopover()
                 } else {
+                    NSApp.activate(ignoringOtherApps: true)
                     self.openPopover(relativeTo: button)
                 }
             }

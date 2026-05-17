@@ -26,13 +26,15 @@ final class HotKeyManager {
             0,
             &eventHotKeyRef
         )
-        guard status == noErr else { return }
+        guard status == noErr else {
+            NSLog("Tabby: failed to register global hotkey (error %d)", status)
+            return
+        }
 
         var eventSpec = EventTypeSpec(eventClass: OSType(kEventClassKeyboard),
                                       eventKind: UInt32(kEventHotKeyPressed))
 
-        // Store self as unretained pointer for the Carbon callback
-        let selfPtr = Unmanaged.passRetained(self).toOpaque()
+        let selfPtr = Unmanaged.passUnretained(self).toOpaque()
 
         InstallEventHandler(
             GetApplicationEventTarget(),
