@@ -7,7 +7,7 @@
         "key": "Edit Bookmark",
         "location": {
           "startingColumn": 34,
-          "startingLine": 36
+          "startingLine": 61
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Add Bookmark",
         "location": {
           "startingColumn": 52,
-          "startingLine": 36
+          "startingLine": 61
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "URL",
         "location": {
           "startingColumn": 31,
-          "startingLine": 53
+          "startingLine": 78
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "https://example.com",
         "location": {
           "startingColumn": 39,
-          "startingLine": 58
+          "startingLine": 83
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "Title",
         "location": {
           "startingColumn": 31,
-          "startingLine": 94
+          "startingLine": 119
         }
       },
       {
@@ -47,7 +47,7 @@
         "key": "Auto-fetched or enter manually",
         "location": {
           "startingColumn": 35,
-          "startingLine": 98
+          "startingLine": 123
         }
       },
       {
@@ -55,7 +55,7 @@
         "key": "Notes",
         "location": {
           "startingColumn": 31,
-          "startingLine": 111
+          "startingLine": 136
         }
       },
       {
@@ -63,7 +63,7 @@
         "key": "No tags yet — create one below.",
         "location": {
           "startingColumn": 34,
-          "startingLine": 134
+          "startingLine": 159
         }
       },
       {
@@ -71,7 +71,7 @@
         "key": "Tags",
         "location": {
           "startingColumn": 31,
-          "startingLine": 129
+          "startingLine": 154
         }
       },
       {
@@ -79,7 +79,7 @@
         "key": "New tag…",
         "location": {
           "startingColumn": 39,
-          "startingLine": 168
+          "startingLine": 193
         }
       },
       {
@@ -87,7 +87,7 @@
         "key": "Add",
         "location": {
           "startingColumn": 36,
-          "startingLine": 190
+          "startingLine": 215
         }
       },
       {
@@ -95,7 +95,7 @@
         "key": "Cancel",
         "location": {
           "startingColumn": 24,
-          "startingLine": 204
+          "startingLine": 229
         }
       },
       {
@@ -103,7 +103,7 @@
         "key": "Save Changes",
         "location": {
           "startingColumn": 36,
-          "startingLine": 207
+          "startingLine": 232
         }
       },
       {
@@ -111,7 +111,7 @@
         "key": "Add Bookmark",
         "location": {
           "startingColumn": 53,
-          "startingLine": 207
+          "startingLine": 232
         }
       }
     ]

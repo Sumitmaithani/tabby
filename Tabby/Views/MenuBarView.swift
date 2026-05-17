@@ -2,7 +2,7 @@ import SwiftUI
 
 private enum MenuScreen: Equatable {
     case list
-    case add
+    case add(Int)
     case edit(Bookmark)
     case settings
 }
@@ -14,14 +14,16 @@ struct MenuBarView: View {
 
     @State private var screen: MenuScreen = .list
     @State private var quickAddURL = ""
+    @State private var nextAddBookmarkSession = 0
 
     var body: some View {
         Group {
             switch screen {
             case .list:
                 listContent
-            case .add:
-                AddBookmarkView(
+            case .add(let session):
+                NewBookmarkScreen(
+                    session: session,
                     onDismiss: { screen = .list },
                     onSaved: {
                         store.searchText = ""
@@ -31,9 +33,12 @@ struct MenuBarView: View {
                 .environmentObject(store)
                 .environmentObject(settingsStore)
             case .edit(let bookmark):
-                AddBookmarkView(editingBookmark: bookmark, onDismiss: { screen = .list })
-                    .environmentObject(store)
-                    .environmentObject(settingsStore)
+                EditBookmarkScreen(
+                    bookmark: bookmark,
+                    onDismiss: { screen = .list }
+                )
+                .environmentObject(store)
+                .environmentObject(settingsStore)
             case .settings:
                 SettingsView(onDismiss: { screen = .list })
                     .environmentObject(store)
@@ -43,6 +48,10 @@ struct MenuBarView: View {
         }
         .frame(width: Constants.PopoverSize.width, height: Constants.PopoverSize.height)
         .background(VisualEffectView(material: .hudWindow, blendingMode: .behindWindow))
+        .onDisappear {
+            // Popover closed — discard any in-progress add/edit screen state.
+            screen = .list
+        }
     }
 
     // MARK: - List
@@ -148,7 +157,10 @@ struct MenuBarView: View {
                     .fixedSize()
                     .help("Sort")
 
-                    Button { screen = .add } label: {
+                    Button {
+                        nextAddBookmarkSession += 1
+                        screen = .add(nextAddBookmarkSession)
+                    } label: {
                         Image(systemName: "plus")
                             .font(.system(size: 13, weight: .medium))
                             .foregroundStyle(.secondary)
@@ -217,6 +229,28 @@ struct MenuBarView: View {
         let count = store.bookmarks.filter { !$0.isArchived }.count
         if count == 0 { return "No bookmarks" }
         return "\(count) bookmark\(count == 1 ? "" : "s")"
+    }
+}
+
+// Separate wrapper types so SwiftUI does not reuse @State between add and edit screens.
+private struct NewBookmarkScreen: View {
+    let session: Int
+    let onDismiss: () -> Void
+    var onSaved: (() -> Void)? = nil
+
+    var body: some View {
+        AddBookmarkView(onDismiss: onDismiss, onSaved: onSaved)
+            .id(session)
+    }
+}
+
+private struct EditBookmarkScreen: View {
+    let bookmark: Bookmark
+    let onDismiss: () -> Void
+
+    var body: some View {
+        AddBookmarkView(editingBookmark: bookmark, onDismiss: onDismiss)
+            .id(bookmark.id)
     }
 }
 

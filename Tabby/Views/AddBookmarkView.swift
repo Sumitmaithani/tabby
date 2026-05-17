@@ -8,17 +8,42 @@ struct AddBookmarkView: View {
     let onDismiss: () -> Void
     var onSaved: (() -> Void)? = nil
 
-    @State private var urlText = ""
-    @State private var titleText = ""
-    @State private var notesText = ""
-    @State private var selectedTags: Set<String> = []
-    @State private var newTagName = ""
-    @State private var newTagColor = Tag.palette[0]
+    @State private var urlText: String
+    @State private var titleText: String
+    @State private var notesText: String
+    @State private var selectedTags: Set<String>
+    @State private var newTagName: String
+    @State private var newTagColor: String
     @State private var isFetchingMetadata = false
     @State private var urlError: String? = nil
+    @State private var metadataFetchGeneration = 0
     @FocusState private var urlFocused: Bool
 
     private var isEditing: Bool { editingBookmark != nil }
+
+    init(
+        editingBookmark: Bookmark? = nil,
+        onDismiss: @escaping () -> Void,
+        onSaved: (() -> Void)? = nil
+    ) {
+        self.editingBookmark = editingBookmark
+        self.onDismiss = onDismiss
+        self.onSaved = onSaved
+
+        if let bookmark = editingBookmark {
+            _urlText = State(initialValue: bookmark.url)
+            _titleText = State(initialValue: bookmark.title)
+            _notesText = State(initialValue: bookmark.notes)
+            _selectedTags = State(initialValue: Set(bookmark.tags))
+        } else {
+            _urlText = State(initialValue: "")
+            _titleText = State(initialValue: "")
+            _notesText = State(initialValue: "")
+            _selectedTags = State(initialValue: [])
+        }
+        _newTagName = State(initialValue: "")
+        _newTagColor = State(initialValue: Tag.palette[0])
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -214,33 +239,28 @@ struct AddBookmarkView: View {
             .padding(14)
         }
         .frame(width: Constants.PopoverSize.width, height: Constants.PopoverSize.height)
-        .onAppear { prefill() }
+        .onAppear {
+            if !isEditing {
+                urlFocused = true
+            }
+        }
+        .onDisappear {
+            metadataFetchGeneration += 1
+            isFetchingMetadata = false
+        }
     }
 
     // MARK: - Helpers
 
-    private func prefill() {
-        guard let b = editingBookmark else {
-            urlFocused = true
-            // Pre-fill from clipboard if it looks like a URL
-            if let clip = NSPasteboard.general.string(forType: .string), clip.isValidURL {
-                urlText = clip
-                autoFetch(url: clip)
-            }
-            return
-        }
-        urlText = b.url
-        titleText = b.title
-        notesText = b.notes
-        selectedTags = Set(b.tags)
-    }
-
     private func autoFetch(url: String) {
         guard settingsStore.settings.fetchFavicons else { return }
+        metadataFetchGeneration += 1
+        let generation = metadataFetchGeneration
         Task {
             isFetchingMetadata = true
             let (title, _) = await FaviconService.shared.fetchMetadata(for: url)
             await MainActor.run {
+                guard generation == metadataFetchGeneration else { return }
                 isFetchingMetadata = false
                 if let title, titleText.isEmpty {
                     titleText = title
@@ -298,6 +318,8 @@ struct AddBookmarkView: View {
         store.searchText = ""
         store.selectedTag = nil
         store.persistImmediately()
+        metadataFetchGeneration += 1
+        isFetchingMetadata = false
         onSaved?()
         onDismiss()
     }
