@@ -1,0 +1,120 @@
+{
+  "source": "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Views/AddBookmarkView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Edit Bookmark",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 61
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Bookmark",
+        "location": {
+          "startingColumn": 52,
+          "startingLine": 61
+        }
+      },
+      {
+        "comment": "",
+        "key": "URL",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 78
+        }
+      },
+      {
+        "comment": "",
+        "key": "https://example.com",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 83
+        }
+      },
+      {
+        "comment": "",
+        "key": "Title",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 119
+        }
+      },
+      {
+        "comment": "",
+        "key": "Auto-fetched or enter manually",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notes",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 136
+        }
+      },
+      {
+        "comment": "",
+        "key": "No tags yet — create one below.",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 159
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tags",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 154
+        }
+      },
+      {
+        "comment": "",
+        "key": "New tag…",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 193
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 215
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 229
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save Changes",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 232
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Bookmark",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 232
+        }
+      }
+    ]
+  },
+  "version": 1
+}

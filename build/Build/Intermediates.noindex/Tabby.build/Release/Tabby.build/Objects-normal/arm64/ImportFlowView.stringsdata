@@ -1,0 +1,320 @@
+{
+  "source": "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Views/Import/ImportFlowView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Bring your bookmarks with you",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "Import from Chrome, Arc, Brave, Edge, Comet, or any file export.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Import from browsers",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "Import from file…",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "Skip for now",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 74
+        }
+      },
+      {
+        "comment": "",
+        "key": "Don't know how to export? See instructions →",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "or drag a file here",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reading your file…",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 131
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 140
+        }
+      },
+      {
+        "comment": "",
+        "key": "Found %lld bookmark%@",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 183
+        }
+      },
+      {
+        "comment": "",
+        "key": "in %lld folder%@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 187
+        }
+      },
+      {
+        "comment": "",
+        "key": "Duplicates: %lld already in Tabby → will be skipped",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 209
+        }
+      },
+      {
+        "comment": "",
+        "key": "You imported this file before. Duplicates will be skipped.",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 172
+        }
+      },
+      {
+        "comment": "",
+        "key": "This may take a moment (%lld bookmarks).",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 192
+        }
+      },
+      {
+        "comment": "",
+        "key": "Import all",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 193
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pick folders",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 215
+        }
+      },
+      {
+        "comment": "",
+        "key": "Import %lld",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 221
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tag name",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 269
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ (%lld)",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 264
+        }
+      },
+      {
+        "comment": "",
+        "key": "Importing bookmarks…",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 291
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld / %lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 296
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 303
+        }
+      },
+      {
+        "comment": "",
+        "key": "Imported %lld bookmark%@",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 323
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld tag%@ created",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 327
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld duplicate%@ skipped",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 333
+        }
+      },
+      {
+        "comment": "",
+        "key": "View bookmarks",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 338
+        }
+      },
+      {
+        "comment": "",
+        "key": "Imported %lld bookmark%@",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 370
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld bookmark%@ couldn't be read",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 374
+        }
+      },
+      {
+        "comment": "",
+        "key": "See details",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 378
+        }
+      },
+      {
+        "comment": "",
+        "key": "Download CSV",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 387
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 394
+        }
+      },
+      {
+        "comment": "",
+        "key": "Line %lld: %@",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 405
+        }
+      },
+      {
+        "comment": "",
+        "key": "Format help",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 467
+        }
+      },
+      {
+        "comment": "",
+        "key": "Report this",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 473
+        }
+      },
+      {
+        "comment": "",
+        "key": "Export bookmarks from your browser",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 564
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 567
+        }
+      },
+      {
+        "comment": "",
+        "key": "Then drag the file into Tabby.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 583
+        }
+      }
+    ]
+  },
+  "version": 1
+}

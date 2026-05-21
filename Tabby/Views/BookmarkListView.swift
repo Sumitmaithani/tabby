@@ -4,6 +4,7 @@ struct BookmarkListView: View {
     @EnvironmentObject var store: BookmarkStore
     @EnvironmentObject var settingsStore: SettingsStore
     var onEdit: (Bookmark) -> Void
+    @Binding var showImportSheet: Bool
 
     @State private var deleteTarget: Bookmark? = nil
 
@@ -12,7 +13,8 @@ struct BookmarkListView: View {
         let isFiltered = !store.searchText.isEmpty || store.selectedTag != nil
 
         if bookmarks.isEmpty {
-            EmptyStateView(isFiltered: isFiltered)
+            EmptyStateView(isFiltered: isFiltered, showImportSheet: $showImportSheet)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
         } else {
             ScrollView {
                 LazyVStack(spacing: 0) {

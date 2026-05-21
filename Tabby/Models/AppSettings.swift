@@ -11,6 +11,13 @@ struct AppSettings: Codable {
     var autoExportInterval: AutoExportInterval = .weekly
     var autoExportFolder: String = ""
     var compactView: Bool = false
+    var duplicatePolicy: DuplicatePolicy = .skip
+    var autoBackupBeforeImport: Bool = true
+    var hasSkippedImportOnboarding: Bool = false
+    var hasCompletedFirstRunImport: Bool = false
+    var lastBrowserImportDate: Date? = nil
+    var lastBrowserImportSources: [String] = []
+    var hasMigratedBrowserTagsToLeaf: Bool = false
 
     enum AutoExportInterval: String, Codable, CaseIterable {
         case daily = "Daily"

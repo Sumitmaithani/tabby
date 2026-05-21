@@ -4,17 +4,19 @@ struct SettingsView: View {
     @EnvironmentObject var store: BookmarkStore
     @EnvironmentObject var settingsStore: SettingsStore
     @EnvironmentObject var hotKeyManager: HotKeyManagerWrapper
+    @EnvironmentObject var importCoordinator: ImportCoordinator
 
     var onDismiss: (() -> Void)? = nil
+    @Binding var showImportSheet: Bool
 
     @State private var selectedTab: SettingsTab = .general
     @State private var restoreError: String? = nil
     @State private var restoreSuccess = false
 
     enum SettingsTab: String, CaseIterable {
-        case general  = "General"
-        case backup   = "Backup"
-        case exportImport = "Export/Import"
+        case general = "General"
+        case backup = "Backup"
+        case data = "Data"
     }
 
     var body: some View {
@@ -50,7 +52,12 @@ struct SettingsView: View {
                         switch selectedTab {
                         case .general:      generalTab
                         case .backup:       backupTab
-                        case .exportImport: ExportImportView()
+                        case .data:
+                            ExportImportView(
+                                showImportSheet: $showImportSheet,
+                                onViewBackups: { selectedTab = .backup }
+                            )
+                            .environmentObject(importCoordinator)
                         }
                     }
                     .padding(16)
@@ -175,7 +182,7 @@ struct SettingsView: View {
         switch tab {
         case .general:      return "gearshape"
         case .backup:       return "clock.arrow.circlepath"
-        case .exportImport: return "square.and.arrow.up.on.square"
+        case .data: return "externaldrive"
         }
     }
 

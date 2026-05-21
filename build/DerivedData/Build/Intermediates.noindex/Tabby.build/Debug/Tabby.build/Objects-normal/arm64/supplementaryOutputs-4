@@ -1,0 +1,23 @@
+{
+  "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Views/AddBookmarkView.swift" : {
+    "const-values" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AddBookmarkView.swiftconstvalues",
+    "dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AddBookmarkView.d",
+    "diagnostics" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AddBookmarkView.dia",
+    "object" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AddBookmarkView.o",
+    "swift-dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AddBookmarkView.swiftdeps"
+  },
+  "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Views/BookmarkRowView.swift" : {
+    "const-values" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkRowView.swiftconstvalues",
+    "dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkRowView.d",
+    "diagnostics" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkRowView.dia",
+    "object" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkRowView.o",
+    "swift-dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkRowView.swiftdeps"
+  },
+  "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Views/TagChipsView.swift" : {
+    "const-values" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/TagChipsView.swiftconstvalues",
+    "dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/TagChipsView.d",
+    "diagnostics" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/TagChipsView.dia",
+    "object" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/TagChipsView.o",
+    "swift-dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/TagChipsView.swiftdeps"
+  }
+}

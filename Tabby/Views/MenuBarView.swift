@@ -11,8 +11,10 @@ struct MenuBarView: View {
     @EnvironmentObject var store: BookmarkStore
     @EnvironmentObject var settingsStore: SettingsStore
     @EnvironmentObject var hotKeyWrapper: HotKeyManagerWrapper
+    @EnvironmentObject var importCoordinator: ImportCoordinator
 
     @State private var screen: MenuScreen = .list
+    @State private var showImportSheet = false
     @State private var quickAddURL = ""
     @State private var nextAddBookmarkSession = 0
 
@@ -40,18 +42,61 @@ struct MenuBarView: View {
                 .environmentObject(store)
                 .environmentObject(settingsStore)
             case .settings:
-                SettingsView(onDismiss: { screen = .list })
+                SettingsView(onDismiss: { screen = .list }, showImportSheet: $showImportSheet)
                     .environmentObject(store)
                     .environmentObject(settingsStore)
                     .environmentObject(hotKeyWrapper)
+                    .environmentObject(importCoordinator)
             }
         }
         .frame(width: Constants.PopoverSize.width, height: Constants.PopoverSize.height)
         .background(VisualEffectView(material: .hudWindow, blendingMode: .behindWindow))
+        .onDrop(of: [.fileURL], isTargeted: nil) { providers in
+            handleFileDrop(providers)
+        }
+        .sheet(isPresented: importSheetBinding) {
+            ImportFlowView()
+                .environmentObject(importCoordinator)
+                .environmentObject(store)
+                .environmentObject(settingsStore)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .tabbyDroppedFile)) { note in
+            if let url = note.userInfo?["url"] as? URL {
+                importCoordinator.ingest(url)
+                showImportSheet = true
+            }
+        }
+        .onChange(of: importCoordinator.phase) { phase in
+            if phase != .idle { showImportSheet = true }
+        }
         .onDisappear {
-            // Popover closed — discard any in-progress add/edit screen state.
             screen = .list
         }
+    }
+
+    private var importSheetBinding: Binding<Bool> {
+        Binding(
+            get: { showImportSheet && importCoordinator.isActive },
+            set: { if !$0 { importCoordinator.dismiss(); showImportSheet = false } }
+        )
+    }
+
+    private func handleFileDrop(_ providers: [NSItemProvider]) -> Bool {
+        guard let provider = providers.first else { return false }
+        provider.loadItem(forTypeIdentifier: "public.file-url", options: nil) { item, _ in
+            var url: URL?
+            if let data = item as? Data {
+                url = URL(dataRepresentation: data, relativeTo: nil)
+            } else if let nsurl = item as? URL {
+                url = nsurl
+            }
+            guard let fileURL = url else { return }
+            Task { @MainActor in
+                importCoordinator.ingest(fileURL)
+                showImportSheet = true
+            }
+        }
+        return true
     }
 
     // MARK: - List
@@ -72,9 +117,10 @@ struct MenuBarView: View {
                 Divider()
             }
 
-            BookmarkListView(onEdit: { screen = .edit($0) })
+            BookmarkListView(onEdit: { screen = .edit($0) }, showImportSheet: $showImportSheet)
                 .environmentObject(store)
                 .environmentObject(settingsStore)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
 
             Divider()
             footer
@@ -174,7 +220,8 @@ struct MenuBarView: View {
             }
         }
         .padding(.horizontal, 12)
-        .padding(.vertical, 10)
+        .padding(.top, Constants.PopoverLayout.toolbarTop)
+        .padding(.bottom, Constants.PopoverLayout.toolbarBottom)
     }
 
     private func quickAddBookmark() {
@@ -222,7 +269,8 @@ struct MenuBarView: View {
             .help("Quit Tabby")
         }
         .padding(.horizontal, 14)
-        .padding(.vertical, 8)
+        .padding(.top, 8)
+        .padding(.bottom, Constants.PopoverLayout.footerBottom)
     }
 
     private var footerText: String {

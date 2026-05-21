@@ -14,7 +14,8 @@ A minimalist macOS menu bar app for saving and accessing bookmarks, with local-o
 - **iCloud Drive sync** — optional, moves the data file into iCloud
 - **Auto-backup** — keeps the last 5 backups, restorable from Settings
 - **Multi-format export** — CSV, JSON, PDF, HTML (Netscape), Markdown
-- **Import** — from CSV, JSON, or HTML bookmark files (Chrome/Firefox/Safari)
+- **One-click browser import** — Chrome, Arc, Brave, Edge, Comet (requires Full Disk Access; DMG distribution, not Mac App Store)
+- **File import** — CSV, JSON, or HTML bookmark exports (fallback)
 - **Light/dark/system theme** — follows system or overridden in Settings
 - **Compact/expanded view** — toggle in Settings
 - **No internet required, no accounts, no telemetry**
@@ -35,6 +36,8 @@ open Tabby.xcodeproj
 Or double-click `Tabby.xcodeproj` in Finder.
 
 ### 2. Configure signing
+
+Tabby is distributed **outside the Mac App Store** (signed + notarized DMG). App Sandbox is disabled so the app can read Chromium bookmark files after the user grants **Full Disk Access** in System Settings.
 
 In Xcode:
 1. Select the **Tabby** target in the Project Navigator
@@ -112,7 +115,9 @@ Tabby/
 ├── Models/
 │   ├── Bookmark.swift          — Bookmark data model (Codable)
 │   ├── Tag.swift               — Tag model with color
-│   └── AppSettings.swift       — Persisted user settings
+│   ├── AppSettings.swift       — Persisted user settings
+│   ├── ImportTypes.swift       — Import formats, folder tree, results
+│   └── BrowserSource.swift     — Browser paths + scan result types
 ├── ViewModels/
 │   ├── BookmarkStore.swift     — Main state: CRUD, search, sort, filter
 │   └── SettingsStore.swift     — Settings state + launch-at-login
@@ -124,11 +129,18 @@ Tabby/
 │   ├── TagChipsView.swift      — Horizontal tag filter strip + tag pills
 │   ├── SettingsView.swift      — Settings panel (General / Sync / Backup)
 │   ├── EmptyStateView.swift    — Empty state illustration
-│   └── ExportImportView.swift  — Export and import controls
+│   ├── ExportImportView.swift  — Export and import controls
+│   └── Import/
+│       ├── ImportFlowView.swift    — Popover import sheet (file + browser)
+│       ├── BrowserImportView.swift — FDA + browser detection list
+│       └── FirstRunWindow.swift    — First-launch welcome window
 ├── Services/
 │   ├── DataService.swift       — JSON read/write + iCloud path switching
 │   ├── ExportService.swift     — CSV / JSON / PDF / HTML / Markdown export
 │   ├── ImportService.swift     — CSV / JSON / HTML import
+│   ├── ImportCoordinator.swift — Import state machine + rollback
+│   ├── BrowserBookmarkScanner.swift — Direct browser bookmark scan
+│   ├── FullDiskAccessChecker.swift  — Full Disk Access probe + settings link
 │   ├── FaviconService.swift    — Page title + favicon fetching
 │   └── BackupService.swift     — Auto-backup creation and restore
 └── Utils/

@@ -31,6 +31,15 @@
 		AA000000000000000000E022 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D022 /* Extensions.swift */; };
 		AA000000000000000000E023 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D023 /* Constants.swift */; };
 		AA000000000000000000E024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D024 /* Assets.xcassets */; };
+		AA000000000000000000E027 /* ImportTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D027 /* ImportTypes.swift */; };
+		AA000000000000000000E028 /* ImportCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D028 /* ImportCoordinator.swift */; };
+		AA000000000000000000E029 /* ImportFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D029 /* ImportFlowView.swift */; };
+		AA000000000000000000E030 /* DraggableStatusItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D030 /* DraggableStatusItemView.swift */; };
+		AA000000000000000000E031 /* BrowserSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D031 /* BrowserSource.swift */; };
+		AA000000000000000000E032 /* FullDiskAccessChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D032 /* FullDiskAccessChecker.swift */; };
+		AA000000000000000000E033 /* BrowserBookmarkScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D033 /* BrowserBookmarkScanner.swift */; };
+		AA000000000000000000E034 /* BrowserImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D034 /* BrowserImportView.swift */; };
+		AA000000000000000000E035 /* FirstRunWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000D035 /* FirstRunWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +70,15 @@
 		AA000000000000000000D024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA000000000000000000D025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA000000000000000000D026 /* Tabby.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tabby.entitlements; sourceTree = "<group>"; };
+		AA000000000000000000D027 /* ImportTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTypes.swift; sourceTree = "<group>"; };
+		AA000000000000000000D028 /* ImportCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportCoordinator.swift; sourceTree = "<group>"; };
+		AA000000000000000000D029 /* ImportFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportFlowView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D030 /* DraggableStatusItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableStatusItemView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D031 /* BrowserSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserSource.swift; sourceTree = "<group>"; };
+		AA000000000000000000D032 /* FullDiskAccessChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDiskAccessChecker.swift; sourceTree = "<group>"; };
+		AA000000000000000000D033 /* BrowserBookmarkScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserBookmarkScanner.swift; sourceTree = "<group>"; };
+		AA000000000000000000D034 /* BrowserImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserImportView.swift; sourceTree = "<group>"; };
+		AA000000000000000000D035 /* FirstRunWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRunWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +129,8 @@
 				AA000000000000000000D003 /* Bookmark.swift */,
 				AA000000000000000000D004 /* Tag.swift */,
 				AA000000000000000000D005 /* AppSettings.swift */,
+				AA000000000000000000D027 /* ImportTypes.swift */,
+				AA000000000000000000D031 /* BrowserSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,6 +155,7 @@
 				AA000000000000000000D013 /* SettingsView.swift */,
 				AA000000000000000000D014 /* EmptyStateView.swift */,
 				AA000000000000000000D015 /* ExportImportView.swift */,
+				AA000000000000000000F008 /* Import */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +168,9 @@
 				AA000000000000000000D018 /* ImportService.swift */,
 				AA000000000000000000D019 /* FaviconService.swift */,
 				AA000000000000000000D020 /* BackupService.swift */,
+				AA000000000000000000D028 /* ImportCoordinator.swift */,
+				AA000000000000000000D032 /* FullDiskAccessChecker.swift */,
+				AA000000000000000000D033 /* BrowserBookmarkScanner.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -157,8 +181,19 @@
 				AA000000000000000000D021 /* HotKeyManager.swift */,
 				AA000000000000000000D022 /* Extensions.swift */,
 				AA000000000000000000D023 /* Constants.swift */,
+				AA000000000000000000D030 /* DraggableStatusItemView.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		AA000000000000000000F008 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000D029 /* ImportFlowView.swift */,
+				AA000000000000000000D034 /* BrowserImportView.swift */,
+				AA000000000000000000D035 /* FirstRunWindow.swift */,
+			);
+			path = Import;
 			sourceTree = "<group>";
 		};
 		AA000000000000000000F007 /* Resources */ = {
@@ -263,6 +298,15 @@
 				AA000000000000000000E021 /* HotKeyManager.swift in Sources */,
 				AA000000000000000000E022 /* Extensions.swift in Sources */,
 				AA000000000000000000E023 /* Constants.swift in Sources */,
+				AA000000000000000000E027 /* ImportTypes.swift in Sources */,
+				AA000000000000000000E028 /* ImportCoordinator.swift in Sources */,
+				AA000000000000000000E029 /* ImportFlowView.swift in Sources */,
+				AA000000000000000000E030 /* DraggableStatusItemView.swift in Sources */,
+				AA000000000000000000E031 /* BrowserSource.swift in Sources */,
+				AA000000000000000000E032 /* FullDiskAccessChecker.swift in Sources */,
+				AA000000000000000000E033 /* BrowserBookmarkScanner.swift in Sources */,
+				AA000000000000000000E034 /* BrowserImportView.swift in Sources */,
+				AA000000000000000000E035 /* FirstRunWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

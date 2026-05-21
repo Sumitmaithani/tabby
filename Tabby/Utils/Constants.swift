@@ -25,6 +25,14 @@ enum Constants {
         static var backupsDirectory: URL {
             appSupportURL.appendingPathComponent("backups", isDirectory: true)
         }
+
+        static var importHistoryFile: URL {
+            appSupportURL.appendingPathComponent("imported_files.json")
+        }
+
+        static var importLockFile: URL {
+            appSupportURL.appendingPathComponent(".import-in-progress")
+        }
     }
 
     enum PopoverSize {
@@ -32,6 +40,30 @@ enum Constants {
         static let height: CGFloat = 560
     }
 
+    enum PopoverLayout {
+        static let toolbarTop: CGFloat = 14
+        static let toolbarBottom: CGFloat = 10
+        static let footerBottom: CGFloat = 14
+        static let heroVertical: CGFloat = 20
+        static let heroHorizontal: CGFloat = 16
+    }
+
     static let maxBackups = 5
     static let faviconFetchTimeout: TimeInterval = 5.0
+
+    static let streamThresholdBytes = 1_000_000
+    static let largeImportThreshold = 100
+    static let softWarnImportCount = 5_000
+    static let hardImportLimit = 50_000
+    static let importBatchSize = 200
+    static let successAutoDismissSeconds = 4.0
+    static let parseYieldInterval = 200
+
+    enum UserDefaultsKeys {
+        static let resumeBrowserImportAfterFDA = "tabby.resumeBrowserImportAfterFDA"
+    }
+}
+
+extension Notification.Name {
+    static let tabbyDroppedFile = Notification.Name("tabbyDroppedFile")
 }

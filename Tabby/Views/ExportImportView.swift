@@ -1,68 +1,97 @@
+import AppKit
 import SwiftUI
 import UniformTypeIdentifiers
 
 struct ExportImportView: View {
     @EnvironmentObject var store: BookmarkStore
+    @EnvironmentObject var settingsStore: SettingsStore
+    @EnvironmentObject var importCoordinator: ImportCoordinator
+
+    @Binding var showImportSheet: Bool
+    var onViewBackups: (() -> Void)?
+
     @State private var exportError: String? = nil
-    @State private var importError: String? = nil
     @State private var successMessage: String? = nil
-    @State private var isImporting = false
-    @State private var isExporting = false
     @State private var selectedFormat: ExportService.ExportFormat = .json
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
 
-            // Export section
-            GroupBox {
-                VStack(alignment: .leading, spacing: 12) {
-                    Label("Export Bookmarks", systemImage: "square.and.arrow.up")
-                        .font(.system(size: 13, weight: .semibold))
+            sectionHeader("Data")
 
-                    Picker("Format", selection: $selectedFormat) {
-                        ForEach(ExportService.ExportFormat.allCases, id: \.self) { fmt in
-                            Text(fmt.rawValue).tag(fmt)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                    .frame(maxWidth: 200)
+            Button {
+                importCoordinator.startBrowserFlow()
+                showImportSheet = true
+            } label: {
+                Label("Import from browsers", systemImage: "globe")
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.small)
+            .disabled(importCoordinator.isActive)
 
-                    Text(formatDescription)
-                        .font(.system(size: 11))
-                        .foregroundStyle(.secondary)
+            Button {
+                importCoordinator.phase = .idle
+                showImportSheet = true
+                importCoordinator.openFilePicker()
+            } label: {
+                Label("Import from file", systemImage: "doc")
+            }
+            .buttonStyle(.bordered)
+            .controlSize(.small)
+            .disabled(importCoordinator.isActive)
 
-                    Button("Export…") { runExport() }
-                        .buttonStyle(.borderedProminent)
-                        .controlSize(.small)
-                        .disabled(store.bookmarks.isEmpty)
-                }
-                .padding(4)
+            if let lastDate = settingsStore.settings.lastBrowserImportDate {
+                Text(lastImportedCaption(date: lastDate, sources: settingsStore.settings.lastBrowserImportSources))
+                    .font(.system(size: 10))
+                    .foregroundStyle(.tertiary)
             }
 
-            // Import section
-            GroupBox {
-                VStack(alignment: .leading, spacing: 12) {
-                    Label("Import Bookmarks", systemImage: "square.and.arrow.down")
-                        .font(.system(size: 13, weight: .semibold))
+            Divider()
 
-                    Text("Supported: JSON (Tabby), CSV, HTML (Netscape bookmarks from Chrome/Firefox/Safari). Duplicate URLs are skipped.")
-                        .font(.system(size: 11))
-                        .foregroundStyle(.secondary)
+            sectionHeader("Export")
 
-                    Button("Import…") { isImporting = true }
-                        .buttonStyle(.bordered)
-                        .controlSize(.small)
+            Picker("Format", selection: $selectedFormat) {
+                ForEach(ExportService.ExportFormat.allCases, id: \.self) { fmt in
+                    Text(fmt.rawValue).tag(fmt)
                 }
-                .padding(4)
             }
+            .pickerStyle(.menu)
+            .frame(maxWidth: 220)
 
-            // Feedback
+            Text(formatDescription)
+                .font(.system(size: 11))
+                .foregroundStyle(.secondary)
+
+            Button("Export…") { runExport() }
+                .buttonStyle(.bordered)
+                .controlSize(.small)
+                .disabled(store.bookmarks.isEmpty)
+
+            Divider()
+
+            sectionHeader("Import options")
+
+            Picker("On duplicate import", selection: $settingsStore.settings.duplicatePolicy) {
+                ForEach(DuplicatePolicy.allCases) { policy in
+                    Text(policy.rawValue).tag(policy)
+                }
+            }
+            .pickerStyle(.menu)
+
+            Toggle("Auto-backup before import", isOn: $settingsStore.settings.autoBackupBeforeImport)
+
+            Button("View backups") {
+                onViewBackups?()
+            }
+            .buttonStyle(.bordered)
+            .controlSize(.small)
+
             if let msg = successMessage {
                 Label(msg, systemImage: "checkmark.circle.fill")
                     .font(.system(size: 11, weight: .medium))
                     .foregroundStyle(.green)
             }
-            if let err = exportError ?? importError {
+            if let err = exportError {
                 Label(err, systemImage: "exclamationmark.triangle.fill")
                     .font(.system(size: 11))
                     .foregroundStyle(.red)
@@ -70,17 +99,25 @@ struct ExportImportView: View {
 
             Spacer()
         }
-        .padding(16)
-        .fileImporter(
-            isPresented: $isImporting,
-            allowedContentTypes: [.json, .commaSeparatedText, .html],
-            allowsMultipleSelection: false
-        ) { result in
-            handleImport(result: result)
-        }
     }
 
-    // MARK: - Helpers
+    private func lastImportedCaption(date: Date, sources: [String]) -> String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        let relative = formatter.localizedString(for: date, relativeTo: Date())
+        if sources.isEmpty {
+            return "Last imported \(relative)"
+        }
+        return "Last imported \(relative) from \(sources.joined(separator: ", "))"
+    }
+
+    private func sectionHeader(_ title: String) -> some View {
+        Text(title)
+            .font(.system(size: 11, weight: .semibold))
+            .foregroundStyle(.secondary)
+            .textCase(.uppercase)
+            .kerning(0.4)
+    }
 
     private var formatDescription: String {
         switch selectedFormat {
@@ -113,24 +150,6 @@ struct ExportImportView: View {
             successMessage = "Exported \(store.bookmarks.count) bookmarks."
         } catch {
             exportError = error.localizedDescription
-        }
-    }
-
-    private func handleImport(result: Result<[URL], Error>) {
-        importError = nil
-        successMessage = nil
-        switch result {
-        case .success(let urls):
-            guard let url = urls.first else { return }
-            do {
-                let (bookmarks, tags) = try ImportService.shared.importBookmarks(from: url)
-                store.merge(imported: bookmarks, importedTags: tags)
-                successMessage = "Imported \(bookmarks.count) bookmarks."
-            } catch {
-                importError = error.localizedDescription
-            }
-        case .failure(let error):
-            importError = error.localizedDescription
         }
     }
 

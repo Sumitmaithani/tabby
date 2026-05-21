@@ -13,9 +13,39 @@ final class FaviconService {
         guard let url = URL(string: urlString) else { return (nil, nil) }
 
         async let title = fetchTitle(url: url)
-        async let favicon = fetchFavicon(url: url)
+        async let favicon = fetchFavicon(for: urlString)
 
         return await (title, favicon)
+    }
+
+    /// Favicon only — tries site `/favicon.ico`, then DuckDuckGo, then Google s2.
+    func fetchFavicon(for urlString: String) async -> Data? {
+        guard let url = URL(string: urlString), let host = url.host?.lowercased() else { return nil }
+
+        let cacheKey = host
+        if let cached = cache[cacheKey] { return cached }
+
+        if let data = await fetchDirectFaviconICO(url: url) {
+            cache[cacheKey] = data
+            return data
+        }
+
+        if let data = await fetchImageData(from: URL(string: "https://icons.duckduckgo.com/ip3/\(host).ico")) {
+            cache[cacheKey] = data
+            return data
+        }
+
+        var google = URLComponents(string: "https://www.google.com/s2/favicons")
+        google?.queryItems = [
+            URLQueryItem(name: "domain", value: host),
+            URLQueryItem(name: "sz", value: "32")
+        ]
+        if let googleURL = google?.url, let data = await fetchImageData(from: googleURL) {
+            cache[cacheKey] = data
+            return data
+        }
+
+        return nil
     }
 
     // MARK: - Title
@@ -45,25 +75,27 @@ final class FaviconService {
 
     // MARK: - Favicon
 
-    private func fetchFavicon(url: URL) async -> Data? {
+    private func fetchDirectFaviconICO(url: URL) async -> Data? {
         guard var baseComps = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return nil }
-
         baseComps.path = "/favicon.ico"
         baseComps.query = nil
         baseComps.fragment = nil
-
         guard let faviconURL = baseComps.url else { return nil }
+        return await fetchImageData(from: faviconURL)
+    }
 
-        let cacheKey = faviconURL.absoluteString
-        if let cached = cache[cacheKey] { return cached }
+    private func fetchImageData(from url: URL?) async -> Data? {
+        guard let url else { return nil }
+        var request = URLRequest(url: url, timeoutInterval: Constants.faviconFetchTimeout)
+        request.setValue("image/*", forHTTPHeaderField: "Accept")
 
-        let request = URLRequest(url: faviconURL, timeoutInterval: Constants.faviconFetchTimeout)
         guard let (data, response) = try? await URLSession.shared.data(for: request),
-              (response as? HTTPURLResponse)?.statusCode == 200,
-              data.count > 100,
-              NSImage(data: data) != nil else { return nil }
-
-        cache[cacheKey] = data
+              let http = response as? HTTPURLResponse,
+              (200...299).contains(http.statusCode),
+              data.count >= 32,
+              NSImage(data: data) != nil else {
+            return nil
+        }
         return data
     }
 

@@ -10,12 +10,34 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     let store = BookmarkStore()
     let settingsStore = SettingsStore()
     let hotKeyWrapper = HotKeyManagerWrapper()
+    lazy var importCoordinator = ImportCoordinator(store: store, settingsStore: settingsStore)
+    private var firstRunWindow: FirstRunWindowController?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
         setupStatusItem()
         setupPopover()
         setupHotKey()
+        checkCrashRecovery()
+        store.migrateLegacyBrowserTagsIfNeeded(settingsStore: settingsStore)
+        if settingsStore.settings.fetchFavicons {
+            store.fetchMissingFaviconsInBackground()
+        }
+        presentFirstRunIfNeeded()
+    }
+
+    private func presentFirstRunIfNeeded() {
+        let s = settingsStore.settings
+        let isEmpty = store.bookmarks.filter { !$0.isArchived }.isEmpty
+        guard !s.hasCompletedFirstRunImport, !s.hasSkippedImportOnboarding, isEmpty else { return }
+
+        let controller = FirstRunWindowController(
+            store: store,
+            settingsStore: settingsStore,
+            coordinator: importCoordinator
+        )
+        firstRunWindow = controller
+        controller.present()
     }
 
     // MARK: - Status item
@@ -23,14 +45,37 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func setupStatusItem() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         guard let button = statusItem?.button else { return }
+
+        let size = NSSize(width: 22, height: 22)
         if let image = NSImage(named: "TabbyMenuBar") {
             image.isTemplate = true
             image.size = NSSize(width: 18, height: 18)
-            button.image = image
+
+            let dragView = DraggableStatusItemView(image: image, size: size)
+            dragView.onClick = { [weak self] in
+                self?.togglePopover()
+            }
+            dragView.onFileDrop = { [weak self] url in
+                self?.handleFileDrop(url)
+            }
+            button.subviews.forEach { $0.removeFromSuperview() }
+            dragView.frame = NSRect(x: 0, y: 0, width: size.width, height: size.height)
+            button.addSubview(dragView)
+            button.frame = NSRect(x: 0, y: 0, width: size.width, height: size.height)
         }
+
         button.action = #selector(togglePopover)
         button.target = self
+        button.sendAction(on: [.leftMouseUp])
         button.toolTip = "Tabby (⌘⇧L)"
+    }
+
+    private func handleFileDrop(_ url: URL) {
+        if popover?.isShown != true, let button = statusItem?.button {
+            openPopover(relativeTo: button)
+        }
+        importCoordinator.ingest(url)
+        NotificationCenter.default.post(name: .tabbyDroppedFile, object: nil, userInfo: ["url": url])
     }
 
     // MARK: - Popover
@@ -48,6 +93,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 .environmentObject(store)
                 .environmentObject(settingsStore)
                 .environmentObject(hotKeyWrapper)
+                .environmentObject(importCoordinator)
         )
         self.popover = popover
     }
@@ -92,6 +138,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                     self.openPopover(relativeTo: button)
                 }
             }
+        }
+    }
+
+    // MARK: - Opt-A crash recovery
+
+    private func checkCrashRecovery() {
+        guard let payload = ImportCoordinator.checkCrashRecoveryLock() else { return }
+
+        let alert = NSAlert()
+        alert.messageText = "Incomplete import detected"
+        alert.informativeText = "Tabby was interrupted while importing \"\(payload.filename)\" (\(payload.bookmarkCount) bookmarks). Your library was rolled back. You can try importing again or discard this notice."
+        alert.addButton(withTitle: "Discard")
+        alert.addButton(withTitle: "OK")
+
+        if alert.runModal() == .alertFirstButtonReturn {
+            ImportCoordinator.discardCrashRecoveryLock()
         }
     }
 }

@@ -162,7 +162,6 @@ final class BookmarkStore: ObservableObject {
     // MARK: - Favicon / metadata fetch
 
     func fetchMetadata(for bookmark: Bookmark, fetchFavicons: Bool) async {
-        guard !isLoadingMetadata else { return }
         isLoadingMetadata = true
         defer { isLoadingMetadata = false }
 
@@ -177,16 +176,128 @@ final class BookmarkStore: ObservableObject {
         }
     }
 
-    // MARK: - Import merge
+    /// Backfills favicons for bookmarks that have none (e.g. after browser import). Globe icon remains as fallback.
+    func fetchMissingFaviconsInBackground() {
+        let ids = bookmarks.filter { $0.faviconData == nil && !$0.isArchived }.map(\.id)
+        guard !ids.isEmpty else { return }
 
-    func merge(imported: [Bookmark], importedTags: [Tag]) {
-        let existingURLs = Set(bookmarks.map { $0.url })
-        let newBookmarks = imported.filter { !existingURLs.contains($0.url) }
-        bookmarks.insert(contentsOf: newBookmarks, at: 0)
-
-        for tag in importedTags where !tags.contains(where: { $0.name == tag.name }) {
-            tags.append(tag)
+        Task {
+            await fetchFavicons(for: ids)
+            persistImmediately()
         }
+    }
+
+    func fetchFaviconIfNeeded(bookmarkID: UUID) async {
+        guard let idx = bookmarks.firstIndex(where: { $0.id == bookmarkID }),
+              bookmarks[idx].faviconData == nil else { return }
+
+        if let data = await faviconService.fetchFavicon(for: bookmarks[idx].url),
+           let current = bookmarks.firstIndex(where: { $0.id == bookmarkID }) {
+            bookmarks[current].faviconData = data
+        }
+    }
+
+    private func fetchFavicons(for ids: [UUID]) async {
+        let concurrency = 6
+        var index = 0
+
+        await withTaskGroup(of: Void.self) { group in
+            while index < ids.count {
+                let slice = ids[index..<min(index + concurrency, ids.count)]
+                index += concurrency
+                for id in slice {
+                    group.addTask { await self.fetchFaviconIfNeeded(bookmarkID: id) }
+                }
+                await group.waitForAll()
+                await Task.yield()
+            }
+        }
+    }
+
+    // MARK: - Import
+
+    func snapshot() -> (bookmarks: [Bookmark], tags: [Tag]) {
+        (bookmarks, tags)
+    }
+
+    func apply(plan: ImportPlan) -> ImportResult {
+        let service = ImportService.shared
+        var toImport = plan.parsed.bookmarks
+
+        if let selected = plan.selectedFolders {
+            toImport = toImport.filter { bookmark in
+                let folderTag = bookmark.tags.first ?? ""
+                return selected.contains(folderTag)
+            }
+        }
+
+        toImport = toImport.map { bookmark in
+            var b = bookmark
+            if let oldTag = b.tags.first, let newTag = plan.renamedTags[oldTag] {
+                b.tags = [newTag]
+            }
+            if b.title.trimmingCharacters(in: .whitespaces).isEmpty {
+                b.title = service.hostnameTitle(for: b.url)
+            }
+            return b
+        }
+
+        var existingByNormalized: [String: Int] = [:]
+        for (idx, b) in bookmarks.enumerated() {
+            existingByNormalized[service.normalizeURL(b.url)] = idx
+        }
+
+        var imported = 0
+        var updated = 0
+        var duplicatesSkipped = 0
+        var tagsCreated = 0
+        var newTagNames = Set<String>()
+
+        for bookmark in toImport {
+            let normalized = service.normalizeURL(bookmark.url)
+            if let existingIdx = existingByNormalized[normalized] {
+                switch plan.policy {
+                case .skip:
+                    duplicatesSkipped += 1
+                case .updateTitle:
+                    if !bookmark.title.isEmpty {
+                        bookmarks[existingIdx].title = bookmark.title
+                    }
+                    if !bookmark.tags.isEmpty {
+                        bookmarks[existingIdx].tags = bookmark.tags
+                    }
+                    updated += 1
+                case .keepBoth:
+                    bookmarks.insert(bookmark, at: 0)
+                    imported += 1
+                }
+            } else {
+                bookmarks.insert(bookmark, at: 0)
+                existingByNormalized[normalized] = 0
+                imported += 1
+            }
+
+            for tagName in bookmark.tags where !tagName.isEmpty {
+                newTagNames.insert(tagName)
+            }
+        }
+
+        for tagName in newTagNames {
+            if !tags.contains(where: { $0.name == tagName }) {
+                let color = Tag.palette[tags.count % Tag.palette.count]
+                tags.append(Tag(name: tagName, colorHex: color))
+                tagsCreated += 1
+            }
+        }
+
+        return ImportResult(
+            imported: imported,
+            updated: updated,
+            tagsCreated: tagsCreated,
+            duplicatesSkipped: duplicatesSkipped,
+            failedRows: plan.parsed.failedRows,
+            backupURL: nil
+        )
     }
 
     // MARK: - Restore from backup
@@ -194,6 +305,50 @@ final class BookmarkStore: ObservableObject {
     func restore(bookmarks: [Bookmark], tags: [Tag]) {
         self.bookmarks = bookmarks
         self.tags = tags
+    }
+
+    // MARK: - Legacy browser tag migration (one-shot)
+
+    /// Collapses `bookmarks-bar.bookmarks-bar.favorites` → `favorites` for bookmarks imported before leaf-only tagging.
+    func migrateLegacyBrowserTagsIfNeeded(settingsStore: SettingsStore) {
+        guard !settingsStore.settings.hasMigratedBrowserTagsToLeaf else { return }
+
+        let needsMigration = bookmarks.contains { bookmark in
+            bookmark.tags.contains { $0.contains(".") || BrowserImportTagging.legacyRootSegments.contains($0) }
+        }
+        guard needsMigration else {
+            settingsStore.settings.hasMigratedBrowserTagsToLeaf = true
+            return
+        }
+
+        backupService.backup(bookmarks: bookmarks, tags: tags)
+
+        var colorByName: [String: String] = [:]
+        for tag in tags {
+            colorByName[tag.name] = tag.colorHex
+        }
+
+        for idx in bookmarks.indices {
+            var newTags: [String] = []
+            for oldTag in bookmarks[idx].tags {
+                guard let leaf = BrowserImportTagging.migrateLegacyTag(oldTag) else { continue }
+                if !newTags.contains(leaf) {
+                    newTags.append(leaf)
+                }
+            }
+            bookmarks[idx].tags = newTags
+        }
+
+        let referenced = Set(bookmarks.flatMap(\.tags))
+        var rebuilt: [Tag] = []
+        for name in referenced.sorted() {
+            let hex = colorByName[name] ?? Tag.palette[rebuilt.count % Tag.palette.count]
+            rebuilt.append(Tag(name: name, colorHex: hex))
+        }
+        tags = rebuilt.isEmpty ? defaultTags() : rebuilt
+
+        settingsStore.settings.hasMigratedBrowserTagsToLeaf = true
+        persistImmediately()
     }
 
     // MARK: - Helpers

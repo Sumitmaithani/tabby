@@ -50,6 +50,11 @@
     "modulePath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/26.5\/CoreVideo.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
+    "isFramework" : true,
+    "moduleName" : "CryptoKit",
+    "modulePath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/26.5\/CryptoKit.swiftmodule\/arm64e-apple-macos.swiftmodule"
+  },
+  {
     "isFramework" : false,
     "moduleName" : "Darwin",
     "modulePath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/26.5\/Darwin.swiftmodule\/arm64e-apple-macos.swiftmodule"
@@ -78,6 +83,11 @@
     "isFramework" : false,
     "moduleName" : "IOKit",
     "modulePath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/26.5\/IOKit.swiftmodule\/arm64e-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "LocalAuthentication",
+    "modulePath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/26.5\/LocalAuthentication.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
@@ -191,462 +201,469 @@
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Accessibility.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Accessibility-DP7NUCKRP7AD3QLE7POW1TKOP.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Accessibility-EQESEART0NGSDMHS1GUVZFWW0.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Accessibility"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/AppKit.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/AppKit-1JCFVB78VIQG5K8MBDO7ZA0G1.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/AppKit-D24TF168PMVZ5D7Y8SBQNGCPL.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "AppKit"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ApplicationServices.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ApplicationServices-DCIK80CZPELYHH79432RPU62T.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ApplicationServices-5J1CDGQJBRDDBTX4GEK7BI99V.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ApplicationServices"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CFNetwork.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CFNetwork-9IBCCHQPXRP4KRSRG5CNE34WD.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CFNetwork-CCF5B33XDZ31W23VI3C9A88AQ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CFNetwork"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/cups.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CUPS-72S5KDU4WUNKB3I4U17NMMZD4.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CUPS-41EH8Y182N06ROYCF5JWXAAM3.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CUPS"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Carbon.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Carbon-8X7LXBE26VD7NOXJNL1KPRXPE.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Carbon-1KY3O5IJLZPABEPSBUD0FZX7C.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Carbon"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Cocoa.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Cocoa-8OSKR53E9RVEAILYMSWO9HXBF.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Cocoa-EFOMJVCFGBVXFBBL6EEUZMWOL.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Cocoa"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ColorSync.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ColorSync-6FSIJZ7K12YHCFJ3UTH74A320.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ColorSync-2I3HT3TXORL5H08NM53T7IWZ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ColorSync"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreData.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreData-7R6J1EBNOLXATFMBFJXCUI8MQ.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreData-79FT6UBOPSW1JS940EIGJ2EJY.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreData"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreFoundation.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreFoundation-6QAIH4438LYY96D11MHEU5GIW.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreFoundation-19ISPE73791GLZ1ZY90DXCMC9.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreFoundation"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreGraphics.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreGraphics-98URALPY9AHX6A5ZXDFV5E4N3.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreGraphics-AE8WU5M8ZTRU559E5DBDFY4V9.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreGraphics"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreImage.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreImage-A3MYSI2MSET3L8MVMSJH44YVJ.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreImage-13RGKNZ3DNQTFAHECOG73925C.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreImage"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreServices.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreServices-3S2NK24JN539X3562XUQX56V7.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreServices-O1E7J1U6ZUAXLQF4WYHT73UV.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreServices"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreText.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreText-A6R83ZO48RG07X7R4A4GO2O0G.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreText-C8XL4YASSQOHUGAFV7WPH5Y7K.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreText"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreTransferable.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreTransferable-AAUGJMKBLXYP19IVJQ1SCNBRP.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreTransferable-3MP06CF7984ONZW2ZYZRRSL6B.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreTransferable"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreVideo.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreVideo-5KHWA1I6HGKEY1CS6XLFG7THB.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/CoreVideo-CVZZ8Q4WBCPITSPBS3IOI60JU.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreVideo"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/Darwin.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Darwin-EQ1PGWZDIBEM72MEF2413C0PH.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Darwin-1CGOJB8LBALANO8DQ7A3QAX6E.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Darwin"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DataDetection.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/DataDetection-3VUT1BD5C0KFONRJMTS8J0GC9.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/DataDetection-ZUVJB7SBDG7LTNLLBTACMCHL.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DataDetection"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DeveloperToolsSupport.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/DeveloperToolsSupport-7YQ4FZDK2HKKP25ULRNJL7ZNQ.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/DeveloperToolsSupport-9Q55G0ZV2BT4LVLQ2TBISVT3A.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DeveloperToolsSupport"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DiskArbitration.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/DiskArbitration-BIJH48R5XD5YAS9E0KS23DZUH.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/DiskArbitration-8K904CVRNQIJG5QEFNC349L4A.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DiskArbitration"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/dispatch.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Dispatch-E7VPVCYT2GCU6LJVVPBSDENJO.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Dispatch-21T7L78ISWIX22V69NWGZL1OF.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Dispatch"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Foundation.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Foundation-6GT7BRUX930SP3IE6NF8AWVC2.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Foundation-BGU8GMQBC1LOZ7CFKH0NL1M7O.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Foundation"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/IOKit.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/IOKit-6N8U6HHCXR0P9IB7S5CYIL8SS.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/IOKit-16OA3BQGCAO6V2L4L48J15FLO.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "IOKit"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/IOSurface.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/IOSurface-D70KFETSK1K55I5ONLO55ZYI0.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/IOSurface-22AYS5PJ4QHI7DHFK391S7HZJ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "IOSurface"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ImageIO.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ImageIO-9ZN1GEXFPF3Q33WGNJELFRAPY.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ImageIO-PLF9XY4GXZ5NW5NFUF8X0V86.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ImageIO"
   },
   {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/LocalAuthentication.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/LocalAuthentication-2FNBUD1QS8L157S9NDNOJCZVV.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "LocalAuthentication"
+  },
+  {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinBasic.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/MachO-BG3LA0IW2TKSJUGYY7UMT1JFA.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/MachO-EW6EOH73DW2DE99XXA19FISSG.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "MachO"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Metal.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Metal-817SFBFUZXEPK0GPWAVXR2G7C.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Metal-8XP3S7Y1DJGR1DM7DC7ZGF455.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Metal"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/OSLog.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/OSLog-EB70BOQJT1GICNWYEZFFV3FMQ.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/OSLog-4ZDAYW58NZ063IQX053WLLAN4.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "OSLog"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/ObjectiveC.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ObjectiveC-9LYU4N29SU54GZ5I9B25KBSKR.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ObjectiveC-CG79SBL9AYPX9GEDOTB0P40T3.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ObjectiveC"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/OpenGL.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/OpenGL-49UZU6M2R06WUICXADO42L1S4.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/OpenGL-AOYVTUKNBITUGLLX365KYD1UW.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "OpenGL"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/PDFKit.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/PDFKit-5HAJB5IEP9R80JNNFSVXCDH3B.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/PDFKit-1TKGGE5FOOQ74M8CZA1O0CSTD.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "PDFKit"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/QuartzCore.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/QuartzCore-EY0QGK03FE04LKPH7B3EAFJ3U.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/QuartzCore-EXDY9OQJ8TRN6J1HM6QV8E431.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "QuartzCore"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Security.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Security-CRHOKVG5FALQLHHQPB1SGUYSV.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Security-3GPC9NUPG7WPEMC3ERO512XNU.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Security"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ServiceManagement.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ServiceManagement-ALZBFOYRT8H2TC36XGVX68Y0V.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ServiceManagement-62291KBN5PP8784ES26TLZT71.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ServiceManagement"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/Spatial\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Spatial-3QYAZVSP6OIJ0UKRKS4HAFWUA.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Spatial-9MUANOEQEXECK9Y05ZSURSB5S.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Spatial"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/SwiftShims-AZXOZUTANRR2Y1LS3XT9YRVS7.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/SwiftShims-53JH9EA0AXDGYA4MKQMSRO6UL.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftShims"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/SwiftUI.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/SwiftUI-1ZZW6YEGE8964APA53V5L1N4.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/SwiftUI-6YH6NL9JQTF6HCQMD789306G6.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftUI"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/SwiftUICore.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/SwiftUICore-CR15PTZLMMJ229VPQLFAEYETL.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/SwiftUICore-2RE8BGIINHFJVS1HWB2QR5S5I.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftUICore"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Symbols.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Symbols-DM3GBGZ4ON0XR78FA61GFDEYY.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/Symbols-E4WJYGRI4OHIVZJGDWZ999VYJ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Symbols"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/UniformTypeIdentifiers.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/UniformTypeIdentifiers-9BMLCS8B6YQ996ZSC3FU7U577.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/UniformTypeIdentifiers-7FBVWDZ3FHBE5RAU1INUT4FQF.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "UniformTypeIdentifiers"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/xpc.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/XPC-Q1IQ7JK6GKHBTPO0Q5JI58LW.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/XPC-F3Z8KCP7OCKJZDWAQD4RQPIKZ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "XPC"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_AvailabilityInternal-4GIFNWICJ9GOBXZD3O6PIY4MU.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_AvailabilityInternal-4X4AYB3J98EBB7BM8EPJU9LJY.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_AvailabilityInternal"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_float-140OMFSUUIUGSHSI9JK08Q8CH.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_float-2IB5Q2F8OEK4ZJVPHQTCARR6M.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_float"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_intrinsics-7HNF583V3ZKJ7VV2XJXFG0OXD.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_intrinsics-CDHBEW5V3CKT21XIZV42MTTQZ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_intrinsics"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_inttypes-7NUZJVLO3BS1Y0TZDR940EGLM.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_inttypes-CT8B7KORYOA5HZ582FDXOEI6I.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_inttypes"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_limits-KMY3JC6E57DV81OKFOYP0M9G.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_limits-F20UCN59H3KE068QNAXRAFIJO.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_limits"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stdarg-DQTMAXL0WZR4P7ZGVK4U9J45Z.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stdarg-9RZO4KSKFR7AZ08VB57B3HIV6.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdarg"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stdatomic-C18F2AW2XLT6EQCIJ9UDHQIJ5.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stdatomic-293NZ10P7U3BCZ5LW6LDGBABO.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdatomic"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stdbool-1R95AYUX1G4M08JWOFRX9T48L.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stdbool-85DKLF84QFINOJ339CNKMFVX3.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdbool"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stddef-C97JX2C2ROZ18FT7HFVHOE3UH.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stddef-665UQ1XIGO1P1OL5T4LTLXW5Q.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stddef"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stdint-7F58JT5QO6HOD00ZECWMP603X.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_stdint-D10DEL96LJNO7R3FE2SEXHS5M.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdint"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_tgmath-9MTC8Y2Q3L7FJ5AUR6DOCDCEV.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_Builtin_tgmath-6I2S05ANXRVIDNXBWN4L29EBV.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_tgmath"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_DarwinFoundation1-NVV62A6PD86X66M0GSOHGLT5.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_DarwinFoundation1-2ESVXCI4ZDMIXK6TQEADX25K7.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation1"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_DarwinFoundation2-DXW7TPPXVK3OH5WGB35O56FGF.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_DarwinFoundation2-8KHOGGED9Z5YF2O2DX0OYIQDT.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation2"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation3.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_DarwinFoundation3-1FOV4GKF867KJJG0NHDOLYDIN.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_DarwinFoundation3-4YFGUZPWX04TOSZFJZ9NGVODI.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation3"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_SwiftConcurrencyShims-6G9G6TEH4Z3HI74NPC8YMNRBJ.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/_SwiftConcurrencyShims-BFEHRDOY194V8S0P51NXQU5XY.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_SwiftConcurrencyShims"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/launch.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/launch-2HLPNAK37WI56F3MDZMPIAVKN.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/launch-DYIL4LLZZWE4AUATYMCCFZ3LO.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "launch"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libDER\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/libDER-B8HAJUDVIK1EMXG6F9859KWEO.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/libDER-EZNMPG9RZ3X3PGO8QZJB42037.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "libDER"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libkern.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/libkern-AU6WTULTOCNM9HSUS7NY9BODY.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/libkern-70AFLQKR4DC8GTLQWY2CGGC5E.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "libkern"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/os-10H1RO9DEJRM54QMUVUISM8J.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/os-P29EAHFMTTIL0C1HJ7QFPAEQ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/os_object-9XFX7S217WA106FIF3N7TX8M4.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/os_object-6CCIJ6604H7B6QA8ACMVNTJSK.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os_object"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/os_workgroup-ASV9O5OK5HG8IE0NAP1B4WVVG.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/os_workgroup-OEHOF2ABH9RV8E5H3BEI3XW2.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os_workgroup"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ptrauth-EEXRBWX8BRQFZODW8XCLZZM4H.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ptrauth-8XHH92PCILESPAGOJ6AHAKZZ1.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ptrauth"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ptrcheck-BSMLBPZ9P059SG6WER7WAI5VI.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/ptrcheck-BTXCUUXXQCLKA0OBSZRHISOBG.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ptrcheck"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/simd\/module.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/simd-5SL3ANULTAMRWK19ZEZVQQAA8.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/simd-1AELYMX0C7CRCANIH2IXG1Y5W.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "simd"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
-    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/sys_types-AUYUV4KFJLLMYOJEACJPIIWBU.pcm",
+    "clangModulePath" : "\/Users\/sumitmaithani\/Documents\/github\/tabby\/Tabby\/build\/ModuleCache.noindex\/sys_types-4GVX74YOP8IYY8EXKR74U1BO4.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "sys_types"

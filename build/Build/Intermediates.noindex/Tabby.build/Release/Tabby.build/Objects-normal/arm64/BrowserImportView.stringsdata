@@ -1,0 +1,144 @@
+{
+  "source": "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Views/Import/BrowserImportView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Welcome to Tabby",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 12
+        }
+      },
+      {
+        "comment": "",
+        "key": "To import your bookmarks, Tabby needs permission to read browser files on your Mac.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 15
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tabby only reads bookmark files from Chrome, Arc, Brave, Edge, and Comet. Nothing leaves your Mac.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 42
+        }
+      },
+      {
+        "comment": "",
+        "key": "Grant access",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 20
+        }
+      },
+      {
+        "comment": "",
+        "key": "I've enabled access — restart Tabby",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 26
+        }
+      },
+      {
+        "comment": "",
+        "key": "Skip — I'll add manually",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Scanning browsers…",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "Found bookmarks to import",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 95
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tabby imports from your default browser profile. Multi-profile support coming soon.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 116
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ is running. Quit %@ and try again, or import from file.",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "Or import from file →",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 135
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 122
+        }
+      },
+      {
+        "comment": "",
+        "key": "No supported browsers found",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 147
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tabby works with Chrome, Arc, Brave, Edge, and Comet.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 150
+        }
+      },
+      {
+        "comment": "",
+        "key": "Or import from file →",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 155
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 162
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Models/AppSettings.swift" : {
+    "const-values" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AppSettings.swiftconstvalues",
+    "dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AppSettings.d",
+    "diagnostics" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AppSettings.dia",
+    "object" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AppSettings.o",
+    "swift-dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/AppSettings.swiftdeps"
+  },
+  "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/Models/Tag.swift" : {
+    "const-values" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/Tag.swiftconstvalues",
+    "dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/Tag.d",
+    "diagnostics" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/Tag.dia",
+    "object" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/Tag.o",
+    "swift-dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/Tag.swiftdeps"
+  },
+  "/Users/sumitmaithani/Documents/github/tabby/Tabby/Tabby/ViewModels/BookmarkStore.swift" : {
+    "const-values" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkStore.swiftconstvalues",
+    "dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkStore.d",
+    "diagnostics" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkStore.dia",
+    "object" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkStore.o",
+    "swift-dependencies" : "/Users/sumitmaithani/Documents/github/tabby/Tabby/build/DerivedData/Build/Intermediates.noindex/Tabby.build/Debug/Tabby.build/Objects-normal/arm64/BookmarkStore.swiftdeps"
+  }
+}

@@ -8,7 +8,7 @@ cd "$PROJECT_DIR"
 
 PBXPROJ="$PROJECT_DIR/Tabby.xcodeproj/project.pbxproj"
 VERSION="$(grep 'MARKETING_VERSION' "$PBXPROJ" | head -1 | sed -E 's/.*= ([^;]+);/\1/' | tr -d '[:space:]')"
-VERSION="${VERSION:-1.0}"
+VERSION="${VERSION:-1.1}"
 
 APP_NAME="Tabby"
 BUILD_DIR="$PROJECT_DIR/build"
